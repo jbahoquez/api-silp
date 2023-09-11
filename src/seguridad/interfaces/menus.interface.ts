@@ -1,6 +1,4 @@
-import { IMenus } from "../../../seguridad/interfaces/menus.interface";
-
-export class Menu implements IMenus{
+export interface IMenus{
     cod_menu: number;
     descripcion?: string;
     posicion?: number;

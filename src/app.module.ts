@@ -7,9 +7,11 @@ import { PerfilesModule } from './seguridad/perfiles/perfiles.module';
 import { MenusModule } from './seguridad/menus/menus.module';
 import { AuthModule } from './seguridad/auth/auth.module';
 import { RolesModule } from './seguridad/roles/roles.module';
+import { TipoTransaccionModule } from './seguridad/tipo-transaccion/tipo-transaccion.module';
+import { LogsModule } from './seguridad/logs/logs.module';
 
 @Module({
-  imports: [IntranetUsuariosModule, PermisosModule, PerfilesModule, MenusModule, AuthModule, RolesModule],
+  imports: [IntranetUsuariosModule, PermisosModule, PerfilesModule, MenusModule, AuthModule, RolesModule, TipoTransaccionModule, LogsModule],
   controllers: [AppController],
   providers: [AppService],
 })

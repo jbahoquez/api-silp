@@ -1,4 +1,4 @@
-export class CreateIntranetUsuarioDto {
+export interface IIntranetUsuarios{
     n_ide:           string;
     password:        string;
     mail?:           string;

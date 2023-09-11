@@ -1,4 +1,4 @@
-export class CreatePermisoDto {
+export interface IPermisos{
     id: number;
     c_emp?: string;
     planta?: string;

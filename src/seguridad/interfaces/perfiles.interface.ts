@@ -1,4 +1,4 @@
-export class CreatePerfileDto {
+export interface IPerfiles{
     id: number;
     descripcion: string;
 }

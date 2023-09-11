@@ -1,4 +1,4 @@
-export class CreatePerfileDto {
+export class CreateTipoTransaccionDto {
     id: number;
     descripcion: string;
 }
