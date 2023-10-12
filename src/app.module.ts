@@ -8,11 +8,24 @@ import { MenusModule } from './seguridad/menus/menus.module';
 import { AuthModule } from './seguridad/auth/auth.module';
 import { RolesModule } from './seguridad/roles/roles.module';
 import { TipoTransaccionModule } from './seguridad/tipo-transaccion/tipo-transaccion.module';
-import { LogsModule } from './seguridad/logs/logs.module';
+import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { DataSourceConfig } from './config/data.source';
 
 @Module({
-  imports: [IntranetUsuariosModule, PermisosModule, PerfilesModule, MenusModule, AuthModule, RolesModule, TipoTransaccionModule, LogsModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      envFilePath:`.${process.env.NODE_ENV}.env`
+    }),
+    TypeOrmModule.forRoot(DataSourceConfig),
+    IntranetUsuariosModule, 
+    PermisosModule, 
+    PerfilesModule, 
+    MenusModule, 
+    AuthModule, 
+    RolesModule, 
+    TipoTransaccionModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
